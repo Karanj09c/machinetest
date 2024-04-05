@@ -1,0 +1,425 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* html {
+  scroll-behavior: smooth;
+} */
+.navbar-brand img{
+	    width: 100px;
+/*    height: 100px;*/
+    object-fit: contain;
+}
+.navbar {
+    position: fixed;
+    background: #fff;
+    padding: 15px 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1080;
+    box-shadow: 0px 4px 6px 0px rgba(12, 0, 46, 0.06);
+}
+.navbar-expand-sm .navbar-collapse{
+	justify-content: end;
+	align-items: center;
+}
+.nav-link{
+	color: #000;
+	margin-right: 25px;
+	position: relative;
+}
+.nav-link:hover{
+	color: #FD5757;
+}
+.navbar-nav{
+	align-items: center;
+}
+.btn-primary{
+	background: #FD5757 !important;
+	border-color: #FD5757 !important;
+}
+ .navbar-nav li.nav-item a.nav-link::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    height: 1px;
+    right: 0;
+    width: 0;
+    opacity: 0;
+    transition: all 0.5s;
+    background: #FD5757;
+}
+.navbar-nav li.nav-item a.nav-link:hover::before {
+    width: 100%;
+    opacity: 1;
+    left: 0;
+    right: auto;
+}
+ ul li.nav-item. a.nav-link{
+ 	transition: all 0.5s;
+ }
+ ul li.nav-item.active a.nav-link {
+    color: #FD5757;
+    border-bottom: 1px solid #FD5757;
+}
+
+.banner{
+/*    margin-top: 130px;*/
+padding-top: 90px;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    /* background-size: cover; */
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.8);
+}
+.banner_sec, .about_sec, .gallery_sec, .contact_sec, .booknow_now {
+	margin-bottom: 50px;
+}
+.about_sec h3, .gallery_sec h3, .booknow_now h3{
+	font-size: 25px;
+	font-weight: 600;
+}
+ .about_pera{
+	padding: 0px 260px;
+	margin-bottom: 40px;
+}
+.card {
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0px 4px 6px 0px rgb(12 0 46 / 14%);
+    border: none;
+}
+.card-img-top {
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 2s ease;
+}
+.card-img-top:hover{
+	transform: scale(1.2);
+}
+.book_btn{
+	max-width: 250px;
+}
+.gallery_sec {
+    background: #f5fdf9;
+    padding: 35px;
+}
+.gallery_sec .col-md-3{
+	    padding-right: 0px;
+}
+.gallery_sec .card{
+	margin-bottom: 10px;
+}
+.gallery_sec .card-img-top {
+    filter: brightness(0.7)
+}
+.gallery_sec .card-img-top:hover{
+	transform: scale(1.2);
+	filter: brightness(0.9)
+}
+
+.contact-info-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.contact-info-icon {
+    height: 40px;
+    width: 40px;
+    background-color: #ff5059;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.contact-info-icon i {
+    font-size: 18px;
+    line-height: 40px;
+    color: #fff;
+}
+
+.contact-info-content {
+  margin-left: 20px;
+}
+
+.contact-info-content h4 {
+  color: #FD5757;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.contact-info-content p {
+  color: #000;
+  font-size: 1em;
+}
+
+.contact-form {
+    background-color: #f5fdf9;
+    padding: 40px;
+    width: 50%;
+}
+.contact-form h2 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-form .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+  background: #f5fdf9;
+}
+
+.contact-form .input-box span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box textarea:focus ~ span {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contact-form .input-box button{
+  width: 100%;
+  background: #ff5059;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ff5059;
+  transition: 0.5s;
+}
+
+.contact-form .input-box input[type="submit"]:hover {
+  background: #fff;
+  color: #00bcd4;
+}
+
+.footer_sec img{
+	width: 100px;
+}
+.social_item {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social_item li a {
+    border: 1px solid #d6dbe3;
+    color: #707b8e;
+}
+.footer_sec{
+	text-align: center;
+	margin-top: 50px;
+	background: #f5fdf9;
+	padding-top: 30px;
+}
+ .social_item li a {
+    font-size: 14px;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.5s;
+    background-color: transparent;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+
+.social_item li a:hover {
+    background-color: #ff5059;
+    box-shadow: 0px 20px 30px 0px rgba(21, 171, 93, 0.24);
+    border-color: #ff5059;
+    color: #fff;
+}
+.card-title{
+	font-weight: 600;
+}
+.booknow_now{
+	padding-top: 130px;
+	padding-bottom: 50px;
+}
+.fc-license-message{
+	display: none;
+}
+.fc-daygrid-event-dot{
+	display: none;
+}
+.fc-direction-ltr .fc-daygrid-event.fc-event-end,
+ .fc-direction-rtl .fc-daygrid-event.fc-event-start {
+    color: #fff;
+}
+.fc .fc-daygrid-body-balanced .fc-daygrid-day-events{
+	margin:5px;
+	
+}
+.fc .fc-daygrid-event-harness{
+		margin-bottom: 3px;
+		border-radius: 5px;
+}
+.fc .fc-col-header-cell-cushion {
+    display: inline-block;
+    padding: 10px 4px;
+    text-decoration: none;
+    color: #000;
+}
+.modal{
+	z-index: 999999;
+}
+/* .fc-scrollgrid-sync-table tr{
+	height: 100px !important;
+} */
+.fc-scrollgrid-sync-table{
+	max-height: 700px !important;
+	overflow: hidden;
+}
+.fc .fc-scrollgrid-liquid {
+    max-height: 700px !important;
+    overflow: hidden;
+}
+.fc .fc-daygrid-day-number {
+    color: #000;
+    text-decoration: none;
+}
+#calendar{
+	height: 800px;
+}
+.swiper-button-next, .swiper-button-prev{
+	color: #000 !important;
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+	font-size: 30px !important;
+    font-weight: 700;
+}
+.card-text {
+	margin-bottom: 25px !important;
+}
+.contact_sec .row{
+    align-items:center;
+}
+.fc .fc-button-primary{
+    background-color: #ff5059 !important;
+    border-color: #ff5059 !important;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+	position: relative;
+	z-index: 0;
+}
+
+#result {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	font-size: 30px;
+	z-index: 100;
+}
+.img {
+transition: 3s all;
+}
+
+.swiper-slide-active .img {
+		animation: scale 5s ease forwards;
+}
+/* body{overflow:hidden;} */
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+         transform: scale(1.1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
