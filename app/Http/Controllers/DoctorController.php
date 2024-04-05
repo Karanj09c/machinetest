@@ -9,6 +9,7 @@ class DoctorController extends Controller
 {
     public function show(Doctor $doctor)
     {
+
         return view('doctor.show', compact('doctor'));
     }
 }

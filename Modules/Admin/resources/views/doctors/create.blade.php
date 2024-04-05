@@ -31,7 +31,7 @@
                                         <div class="col-md-6">
                                             <div
                                                 class="form-group mb-3 {{ $errors->has('doctor_name') ? 'has-danger' : '' }}">
-                                                <label class="col-form-label">{{ 'Title' }}</label>
+                                                <label class="col-form-label">{{ 'Doctor Name' }}</label>
                                                 <input
                                                     class="form-control {{ $errors->has('doctor_name') ? 'form-control-danger' : '' }}"
                                                     name="doctor_name" type="text" value="{{ old('doctor_name') }}"
@@ -43,14 +43,14 @@
                                                 @enderror
                                             </div>
                                         </div>
-                                         <div class="col-md-6">
+                                        <div class="col-md-6">
                                             <div
                                                 class="form-group mb-3 {{ $errors->has('doctor_speciality') ? 'has-danger' : '' }}">
-                                                <label class="col-form-label">{{ 'Title' }}</label>
+                                                <label class="col-form-label">{{ 'Doctor Speciality' }}</label>
                                                 <input
                                                     class="form-control {{ $errors->has('doctor_speciality') ? 'form-control-danger' : '' }}"
-                                                    name="doctor_speciality" type="text" value="{{ old('doctor_speciality') }}"
-                                                    placeholder="Enter doctor name">
+                                                    name="doctor_speciality" type="text"
+                                                    value="{{ old('doctor_speciality') }}" placeholder="Enter doctor speciality">
                                                 @error('doctor_speciality')
                                                     <div class="col-form-alert-label">
                                                         {{ $message }}
@@ -60,8 +60,8 @@
                                         </div>
 
                                     </div>
-                                    <div class="card-footer"> <button type="submit"
-                                            class="btn btn-primary">save</button></div>
+                                    <div class="card-footer"> <button type="submit" class="btn btn-primary">save</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>

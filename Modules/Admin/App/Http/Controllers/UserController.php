@@ -3,6 +3,7 @@
 namespace Modules\Admin\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Jobs\SendVerificationJob;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -25,7 +26,7 @@ class UserController extends Controller
         $user->status = $request->status;
         
         $user->save();
-
+        SendVerificationJob::dispatch($user);
         return response()->json(['status' => true,'message' => 'Status updated successfully']);
     }
     /**

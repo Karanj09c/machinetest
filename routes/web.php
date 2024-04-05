@@ -19,8 +19,8 @@ use App\Http\Controllers\web\HomeController;
 |
 */
 
-Route::get('/clear', function() {
-   
+Route::get('/clear', function () {
+
     Artisan::call('config:clear');
     Artisan::call('cache:clear');
     Artisan::call('config:cache');
@@ -31,13 +31,20 @@ Route::get('/clear', function() {
     return "Cleared!";
 });
 
+Route::post('logout', function() {
 
+    Auth::logout();
+    return redirect('/'); // Redirect to the home page, change the URL as needed
+});
 
-Route::get('/home', [DashboardController::class,'index'])->name('dashboard');
-Route::get('/doctors/{doctor}', [DoctorController::class,'show'])->name('doctors.show');
-Route::post('/book-appointment', [AppointmentController::class,'store'])->name('appointments.store');
+Route::get('/',function(){
+    return view('welcome');
+});
+Route::get('/home', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/doctors/{doctor}', [DoctorController::class, 'show'])->name('doctors.show');
+Route::post('/book-appointment', [AppointmentController::class, 'store'])->name('appointments.store');
 
-Route::get('/register',[CustomRegisterController::class,'showRegistrationForm'])->name('register');
-Route::post('/register',[CustomRegisterController::class,'register'] );
-Route::get('/login',[CustomLoginController::class,'showLoginForm'])->name('login');
-Route::post('/login', [CustomLoginController::class,'login'] );
+Route::get('/register', [CustomRegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [CustomRegisterController::class, 'register']);
+Route::get('/login', [CustomLoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [CustomLoginController::class, 'login']);
