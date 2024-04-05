@@ -45,6 +45,7 @@
 </style>
 
 <body>
+    welcome {{ Auth::user()->name ?? '' }}
     <form method="post" action="{{ url('logout') }}">
         @csrf
         <button type="submit"> logout</button>
